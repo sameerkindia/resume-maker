@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Resume Manager</title>
+  </head>
+  <body>
+    <div id="form-container">
+      <h2>Add Resume</h2>
+      <form id="resumeForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+
+        <label for="profilePicture">Profile Picture:</label>
+        <input type="file" id="profilePicture" />
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" />
+
+        <label for="city">City:</label>
+        <input type="text" id="city" />
+
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" />
+
+        <label for="linkedin">LinkedIn URL:</label>
+        <input type="text" id="linkedin" />
+
+        <label for="skills">Skills:</label>
+        <div id="skillsDropdown" class="custom-dropdown">
+          <input type="text" id="skillsSearch" placeholder="Search..." />
+          <div id="skillsList" class="dropdown-content">
+            <div>JavaScript</div>
+            <div>CSS</div>
+            <div>NodeJs</div>
+            <div>ExpressJs</div>
+            <div>HTML</div>
+            <div>NoSQL</div>
+          </div>
+        </div>
+
+        <label for="resume">Resume:</label>
+        <textarea id="resume"></textarea>
+
+        <div class="actions">
+          <button type="button" id="add">Add</button>
+          <button type="button" id="clear">Clear</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="table-container">
+      <h2>Resumes</h2>
+      <table id="resumeTable">
+        <thead>
+          <tr>
+            <th>Profile Pic</th>
+            <th>Name</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>LinkedIn</th>
+            <th>Skills</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="clearAllData">Clear All Data</button>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
